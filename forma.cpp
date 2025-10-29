@@ -11,6 +11,7 @@ private:
 
 public:
   forma() : nome(){};
+  forma(const char* nome) : nome(nome){};
   virtual void desenhar();
 };
 #endif
