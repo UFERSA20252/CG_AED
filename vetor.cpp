@@ -15,4 +15,7 @@ public:
             return {this->getX() + outro.getX(), this->getY() + outro.getY()};
         }
 
+  vetor operator- (const vetor & outro){
+    return {outro.getX()-this->getX(), outro.getY()-this->getY()};
+  }
 };
