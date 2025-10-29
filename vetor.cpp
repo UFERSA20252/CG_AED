@@ -18,4 +18,7 @@ public:
   vetor operator- (const vetor & outro){
     return {outro.getX()-this->getX(), outro.getY()-this->getY()};
   }
+  void desenhar() const{
+    cout << "Vetor (" << getX() << ", "<<getY()<<")";
+  }
 };
