@@ -12,5 +12,8 @@ public:
   }
   vetor() : ponto() {}
 
+  vetor operator- (const vetor & outro){
+    return {outro.getX()-this->getX(), outro.getY()-this->getY()};
+  }
 
 };
