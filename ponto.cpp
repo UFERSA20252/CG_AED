@@ -1,3 +1,5 @@
+#ifndef PONTO_CPP
+#define PONTO_CPP
 #include "forma.cpp"
 
 class ponto : forma {
@@ -22,7 +24,7 @@ class ponto : forma {
         ponto operator-(const ponto & outro ){
             return {this->x - outro.x, this->y - outro.y};
         }
-        void desenhar() const {
+        virtual void desenhar() const {
             cout << "Ponto: ("
                  << x
                  <<", "
@@ -30,3 +32,4 @@ class ponto : forma {
                  <<")\n";
         }
 };
+#endif
