@@ -1,3 +1,4 @@
+//https://github.com/UFERSA20252/CG_AED.git
 #ifndef FORMA_CPP
 #define FORMA_CPP
 #include <iostream>
@@ -12,6 +13,6 @@ private:
 public:
   forma() : nome(){};
   forma(const char* nome) : nome(nome){};
-  virtual void desenhar();
+  virtual void desenhar() const  = 0;
 };
 #endif
