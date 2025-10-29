@@ -18,6 +18,10 @@ class ponto : forma {
         ponto operator+(const ponto & outro ){
             return {this->x + outro.x, this->y + outro.y};
         }
+
+        ponto operator-(const ponto & outro ){
+            return {this->x - outro.x, this->y - outro.y};
+        }
         void desenhar() const {
             cout << "Ponto: ("
                  << x
