@@ -28,7 +28,7 @@ class vetor : ponto {
     return atan2(getY(), getX());
   }
 
-  void desenhar() const {
+  virtual void desenhar() const {
     cout << "Vetor (" << getX() << ", " << getY() << ")";
   }
 
