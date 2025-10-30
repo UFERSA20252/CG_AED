@@ -3,7 +3,7 @@
 #include "forma.cpp"
 #include "ponto.cpp"
 class poligono : public forma {
- protected:
+ private:
   ponto* vertices;
   int numVertices;
 
@@ -33,5 +33,17 @@ class poligono : public forma {
       vertices[i].desenhar();
     }
   }
+
+  /**Método para calcular a área do polígono: Shoelace */
+  virtual float area() const {
+    float a = 0;
+    for (int i = 0; i < numVertices; i++) {
+      int j = (i + 1) % numVertices;
+      a += vertices[i].getX() * vertices[j].getY();
+      a -= vertices[j].getX() * vertices[i].getY();
+    }
+    return abs(a) / 2.0;
+  };
+  // virtual float perimetro() const = 0;
 };
 #endif
